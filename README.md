@@ -96,6 +96,54 @@ python faucet.py
 - Log progress in terminal  
 
 ---
+## 💸 Faucet Multiple Tokens ($BTC, $ETH, $USDT)
+
+> 🔑 Want to claim more than just A0GI? You can now faucet $BTC, $ETH, and $USDT with a single script!
+
+### ⚙️ Setup Instructions
+
+1. 📥 **Import Private Keys**
+   - Add each private key (one per line) into the `priv.txt` file.
+   - Example:
+     ```
+     0xabc123...
+     0xdef456...
+     ```
+
+2. 🌍 **Ensure You Have A0GI as Gas**
+   - Each wallet used for faucet must already have **A0GI tokens** to pay for gas fees on the 0G Testnet.
+
+3. 🚀 **Run the Script**
+   ```bash
+   python faucet-3-tokens.py
+   ```
+
+✅ The script will automatically:
+- Connect via proxy (defined in `proxies.txt`)
+- Mint $USDT → $ETH → $BTC (with retries)
+- Log success/failure per token per wallet
+
+📁 Output will be displayed in the terminal with timestamps and colorized logs.
+
+---
+
+🔄 **Threaded Execution**
+
+- Supports concurrent minting using Python’s `concurrent.futures.ThreadPoolExecutor`
+- Adjust number of threads directly in `faucet-3-tokens.py` (default is 50):
+  ```python
+  THREADS = 50
+  ```
+
+---
+
+🎯 **Pro Tip**
+
+- 🔁 Use fresh proxies to avoid rate limits
+- 🧪 Test on a few wallets before scaling up
+- ⛽ Top up A0GI if transactions are failing due to insufficient gas
+
+---
 
 ## 💰 Check A0GI Balances
 
