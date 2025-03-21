@@ -9,7 +9,7 @@ Welcome to the **0G Faucet Script** – a Python-based tool that automates A0GI 
 
 ## 📦 Features
 
-- ✅ Claim A0GI tokens for multiple wallets  
+- ✅ Claim A0GI, BTC, ETH, USDT tokens for multiple wallets  
 - 🔁 Automatic hCaptcha solving using [2Captcha](https://2captcha.com)  
 - 🧵 Multi-threaded execution with adjustable thread count  
 - 🛡️ Proxy rotation support  
