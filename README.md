@@ -1,57 +1,34 @@
+# 🚀 0G Faucet Script
 
-# 🚰 0G Faucet Script
+## 🌟 Overview
 
-Welcome to the **0G Faucet Script** – a Python-based tool that automates A0GI token claims on the [0g.ai](https://faucet.0g.ai) testnet faucet.
+0G Faucet Script is a Python-based tool designed to automate the claiming of A0GI tokens from the 0g.ai testnet faucet. This script supports multi-wallet claims, automatic captcha solving, multi-threading execution, proxy rotation, and balance checking via RPC.
 
-> 🔧 Supports multi-threaded requests with captcha solving and proxy usage.
+## 🔥 Features
 
----
-
-## 📦 Features
-
-- ✅ Claim A0GI, BTC, ETH, USDT tokens for multiple wallets  
-- 🔁 Automatic hCaptcha solving using [2Captcha](https://2captcha.com)  
-- 🧵 Multi-threaded execution with adjustable thread count  
-- 🛡️ Proxy rotation support  
-- 📊 Check A0GI balance for wallets via RPC  
-- 📁 Outputs wallets with/without balance to files  
-- 💬 Community support via Telegram  
+✅ Claim A0GI, BTC, ETH, USDT for multiple wallets 🎭  
+✅ Automatic hCaptcha solving using 2Captcha 🔐  
+✅ Multi-thread execution with adjustable thread count ⚡  
+✅ Proxy rotation support 🛡️  
+✅ Balance checking via RPC 📊  
+✅ Export wallets with/without balance to a file 📁  
+✅ Community support via Telegram 💬  
 
 ---
 
-## 🛠️ Installation Guide
+## 🛠️ Installation
 
-### ✅ Prerequisites
+### 1️⃣ Prerequisites
+Ensure you have **Python 3.8+** and `pip` installed.
 
-Ensure you have **Python 3.8+** and **pip** installed.
-
----
-
-### 🐧 For Linux/macOS
-
-- Clone the repo
+### 2️⃣ Clone Repository
 ```bash
-git clone https://github.com/rpchubs/0G-Faucet.git
+git clone https://github.com/mhdverel/0G-Faucet.git
 cd 0G-Faucet
 ```
 
-- Install required libraries
+### 3️⃣ Install Dependencies
 ```bash
-pip install -r requirements.txt
-```
-
----
-
-### 🪟 For Windows
-
-- Clone the repo
-```powershell
-git clone https://github.com/rpchubs/0G-Faucet.git
-cd 0G-Faucet
-```
-
-- Install required libraries
-```powershell
 pip install -r requirements.txt
 ```
 
@@ -59,123 +36,48 @@ pip install -r requirements.txt
 
 ## ⚙️ Configuration
 
-Open the `faucet.py` script and scroll to **line 13–14**:
+### 🔑 Wallets
+Add your private keys to `priv.txt` (one key per line).
 
-```python
-THREADS = 30
-TWO_CAPTCHA_API_KEY = "your-2captcha-api-key"
-```
+### 🛡️ Proxy (Optional)
+Add proxies to `proxies.txt` in the format: `user:pass@ip:port` (one per line).
 
-🔁 Replace:
-- `THREADS` with the number of parallel threads you want to run (e.g., 20–50 recommended).
-- `TWO_CAPTCHA_API_KEY` with your valid API key from [2Captcha](https://2captcha.com).
+### 🔍 2Captcha API
+Add your 2Captcha API key to `2captcha.txt`.
 
 ---
 
-## 🧾 Required Files
+## 🚀 Usage
 
-Ensure the following files exist in the script directory:
-
-- `wallets.txt` – 📜 List of wallet addresses (one per line)
-- `proxies.txt` – 🌍 List of HTTP proxies (one per line) format ```http://user:password@ip:port```
-
----
-
-## 🚀 Running the Faucet Script
-
-After setup:
-
+### 💰 Claim Tokens
+To claim **A0GI tokens**, run:
 ```bash
 python faucet.py
 ```
+To claim **A0GI, BTC, ETH, USDT**, run:
+```bash
+python faucet-3-tokens.py
+```
 
-✅ The script will:
-- Solve captchas using 2Captcha  
-- Use proxies in rotation  
-- Claim A0GI for each wallet  
-- Log progress in terminal  
-
----
-## 💸 Faucet Multiple Tokens ($BTC, $ETH, $USDT)
-
-> 🔑 Want to claim more than just A0GI? You can now faucet $BTC, $ETH, and $USDT with a single script!
-
-### ⚙️ Setup Instructions
-
-1. 📥 **Import Private Keys**
-   - Add each private key (one per line) into the `priv.txt` file.
-   - Example:
-     ```
-     0xabc123...
-     0xdef456...
-     ```
-
-2. 🌍 **Ensure You Have A0GI as Gas**
-   - Each wallet used for faucet must already have **A0GI tokens** to pay for gas fees on the 0G Testnet.
-
-3. 🚀 **Run the Script**
-   ```bash
-   python faucet-3-tokens.py
-   ```
-
-✅ The script will automatically:
-- Connect via proxy (defined in `proxies.txt`)
-- Mint $USDT → $ETH → $BTC (with retries)
-- Log success/failure per token per wallet
-
-📁 Output will be displayed in the terminal with timestamps and colorized logs.
-
----
-
-🔄 **Threaded Execution**
-
-- Supports concurrent minting using Python’s `concurrent.futures.ThreadPoolExecutor`
-- Adjust number of threads directly in `faucet-3-tokens.py` (default is 50):
-  ```python
-  THREADS = 50
-  ```
-
----
-
-🎯 **Pro Tip**
-
-- 🔁 Use fresh proxies to avoid rate limits
-- 🧪 Test on a few wallets before scaling up
-- ⛽ Top up A0GI if transactions are failing due to insufficient gas
-
----
-
-## 💰 Check A0GI Balances
-
-Use `check-balance.py` to verify wallet balances:
-
+### 📊 Check Wallet Balance
+To check the **A0GI balance** of your wallets, run:
 ```bash
 python check-balance.py
 ```
 
-📤 Outputs:
-- `has_balance.txt` – Wallets that received A0GI
-- `no_balance.txt` – Wallets with 0 balance
+### 📤 Send Tokens
+To send tokens, add sender private keys to `priv_send.txt` and run:
+```bash
+python send.py
+```
 
 ---
 
-## 🙋 Support & Community
+## ⚠️ Important Notes
 
-Having issues or want to discuss?
+⚠️ **Do not share your private keys.**  
+⚠️ **Use proxies to avoid IP bans when claiming in bulk.**  
+⚠️ **For support, join our Telegram community.** 📢  
 
-Join our Telegram channels:
+Enjoy automated claiming with **0G Faucet Script!** 🎉
 
-- 🛠️ [RPC Hubs Channel](https://t.me/RPC_Hubs)  
-- 💬 [RPC Community Chat](https://t.me/chat_RPC_Community)  
-
----
-
-## 📌 Notes
-
-- ✅ Recommended: Use fresh proxies and rotate often  
-- 🕒 Faucet has a 24h cooldown per wallet  
-- 📶 Make sure your 2Captcha balance is sufficient  
-
----
-
-Made with ❤️ by the RPC Hubs Team
