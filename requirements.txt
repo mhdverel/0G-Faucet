@@ -5,3 +5,4 @@ pytz
 web3==6.20.0
 tzlocal
 eth-account==0.11.2
+asyncio
