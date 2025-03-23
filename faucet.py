@@ -11,7 +11,7 @@ init(autoreset=True)
 
 # CONFIG THREADS AND 2CAPTCHA API KEY
 THREADS = 30
-TWO_CAPTCHA_API_KEY = "your-2captcha-api-key"
+TWO_CAPTCHA_API_KEY = "9ea065386007846e1680f7a738d0306d"
 
 HCAPTCHA_SITEKEY = "914e63b4-ac20-4c24-bc92-cdb6950ccfde"
 HCAPTCHA_PAGE_URL = "https://faucet.0g.ai"
