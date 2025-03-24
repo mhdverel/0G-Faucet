@@ -43,7 +43,8 @@ Add your private keys to `priv.txt` (one key per line).
 Add proxies to `proxies.txt` in the format: `user:pass@ip:port` (one per line).
 
 ### 🔍 2Captcha API
-Add your 2Captcha API key to `2captcha.txt`.
+Add your 2Captcha API key in `faucet.py` line 14.
+TWO_CAPTCHA_API_KEY = "your-2captcha-api-key"
 
 ---
 
