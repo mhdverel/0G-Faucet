@@ -7,16 +7,16 @@ if not web3.is_connected():
     print("❌ Unable to connect to RPC.")
     exit(1)
 
-wallet_file = "wallets.txt"
+wallet_file = "address_wallet.txt"
 try:
     with open(wallet_file, "r") as file:
         wallets = [line.strip() for line in file if line.strip()]
 except FileNotFoundError:
-    print("❌ wallets.txt file not found.")
+    print("❌ address_wallet.txt file not found.")
     exit(1)
 
 if not wallets:
-    print("❌ The wallets.txt file does not contain valid wallet addresses.")
+    print("❌ The address_wallet.txt file does not contain valid wallet addresses.")
     exit(1)
 
 print("🔹 Checking A0GI balance...")
