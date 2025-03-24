@@ -15,7 +15,7 @@ init(autoreset=True)
 # ==================== CONFIG =====================
 THREADS = 50
 
-PRIV_FILE = "priv.txt"
+PRIV_FILE = "privatekey.txt"
 PROXIES_FILE = "proxies.txt"
 
 NODE_URL = "https://evmrpc-testnet.0g.ai"  # RPC của bạn
@@ -247,7 +247,7 @@ def process_account(private_key, index, stop_event):
 
 # ==================== MAIN FUNCTION ====================
 def main(stop_event):
-    log_info("Start reading priv.txt and proceed to on-chain faucets: USDT, ETH, BTC...", idx=0)
+    log_info("Start reading privatekey.txt and proceed to on-chain faucets: USDT, ETH, BTC...", idx=0)
     log_info(f"Number of threads: {THREADS}", idx=0)
 
     # Đọc private keys từ file
