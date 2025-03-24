@@ -104,17 +104,17 @@ async def main():
         print("Format alamat tidak valid! Harap masukkan alamat Ethereum yang benar.")
         return
 
-    # Membaca file priv_send.txt
-    print("\nMembaca file priv_send.txt...")
+    # Membaca file privatekey.txt
+    print("\nMembaca file privatekey.txt...")
     try:
-        with open("priv_send.txt", "r") as file:
+        with open("privatekey.txt", "r") as file:
             private_keys = [line.strip() for line in file.readlines() if line.strip()]
     except FileNotFoundError:
-        print("File priv_send.txt tidak ditemukan!")
+        print("File privatekey.txt tidak ditemukan!")
         return
 
     if not private_keys:
-        print("Tidak ada private key dalam priv_send.txt!")
+        print("Tidak ada private key dalam privatekey.txt!")
         return
 
     print(f"Ditemukan {len(private_keys)} private keys.")
