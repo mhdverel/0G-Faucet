@@ -37,7 +37,7 @@ pip install -r requirements.txt
 ## ⚙️ Configuration
 
 ### 🔑 Wallets
-Add your private keys to `priv.txt` (one key per line).
+Add your private keys to `privatekey.txt` (one key per line).
 
 ### 🛡️ Proxy (Optional)
 Add proxies to `proxies.txt` in the format: `user:pass@ip:port` (one per line).
@@ -67,7 +67,7 @@ python check-balance.py
 ```
 
 ### 📤 Send Tokens
-To send tokens, add sender private keys to `priv_send.txt` and run:
+To send tokens, add sender private keys to `privatekey.txt` and run:
 ```bash
 python send.py
 ```
