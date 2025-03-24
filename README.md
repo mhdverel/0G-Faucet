@@ -44,7 +44,7 @@ Add proxies to `proxies.txt` in the format: `user:pass@ip:port` (one per line).
 
 ### 🔍 2Captcha API
 Add your 2Captcha API key in `faucet.py` line 14.
-TWO_CAPTCHA_API_KEY = "your-2captcha-api-key"
+<br>TWO_CAPTCHA_API_KEY = "your-2captcha-api-key"
 
 ---
 
