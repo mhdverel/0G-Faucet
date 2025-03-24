@@ -15,7 +15,7 @@ TWO_CAPTCHA_API_KEY = "your-2captcha-api-key"
 
 HCAPTCHA_SITEKEY = "914e63b4-ac20-4c24-bc92-cdb6950ccfde"
 HCAPTCHA_PAGE_URL = "https://faucet.0g.ai"
-WALLETS_FILE = "wallets.txt"
+WALLETS_FILE = "address_wallet.txt"
 PROXIES_FILE = "proxies.txt"
 FAUCET_API_URL = "https://faucet.0g.ai/api/faucet"
 headers = {"Content-Type": "application/json"}
